@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario Web</title>
+    <style>
+        input:invalid{
+            background-color: crimson;
+            border-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" id="form_1" method="POST">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre" required autofocus><br><br>
+        <label for="numero">Número entre -50 y 50: </label>
+        <input id="numero" name="numero" type="number" min="-50" max="50"><br><br>
+        <label for="passwd">Contraseña: </label>
+        <input type="password" id="passwd" name="passwd" min="6" max="12" pattern="[a-z][0-9]{6-12}"><br><br>
+        <label for="email">E-mail: </label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="fecha">Fecha: </label>
+        <input type="date" id="fecha" name="fecha"><br><br>
+        <label for="url">Introduce una URL: </label>
+        <input type="url" name="url" id="url" title="Introduce la dirección de una página Web."><br><br>
+        <label for="provincia">Provincias: </label>
+        <input list="provincias" name="provincia" id="provincia">
+            <datalist id="provincias">
+                <option value="Palencia"></option>
+                <option value="Cantabria"></option>
+                <option value="La Rioja"></option>
+                <option value="León"></option>
+                <option value="Ciudad Real"></option>
+                <option value="Valencia"></option>
+            </datalist><br><br>
+        <label for="fichero">Ficheros: </label>
+        <input type="file" id="fichero" name="fichero" multiple><br><br>
+        <label for="cp">Código Postal: </label>
+        <input type="text" max="5" id="cp" name="cp" pattern="[0-9]{5}"><br><br>
+        <label for="telefono">Teléfono: </label>
+        <input type="tel" id="telefono" name="telefono"><br><br>
+        <label for="color">Color: </label>
+        <input type="color" id="color" name="color"><br><br>
+        <label for="busqueda">Término de búsqueda: </label>
+        <input type="search" id="busqueda" name="busqueda"><br><br>
+        <label for="prograso">Progreso: </label>
+        <progress value="25" max="100"></progress><br><br>
+        <button>Enviar</button>
+    </form>
+</body>
+</html>
